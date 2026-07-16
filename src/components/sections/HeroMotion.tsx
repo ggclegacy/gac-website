@@ -231,10 +231,17 @@ export function HeroMotion({ children }: HeroMotionProps) {
 
             const back = root.querySelector<HTMLElement>("[data-chamber-depth='back']");
             const front = root.querySelector<HTMLElement>("[data-chamber-depth='front']");
+            const storyTransition = root.querySelector<HTMLElement>("[data-chamber-transition]");
             const moveBack = back ? gsap.quickTo(back, "y", { duration: 0.35, ease: "none" }) : null;
             const moveFront = front ? gsap.quickTo(front, "y", { duration: 0.35, ease: "none" }) : null;
             const fadeChamber = chamber
               ? gsap.quickTo(chamber, "opacity", { duration: 0.35, ease: "none" })
+              : null;
+            const openStory = storyTransition
+              ? gsap.quickTo(storyTransition, "scaleY", { duration: 0.45, ease: "power1.out" })
+              : null;
+            const revealStory = storyTransition
+              ? gsap.quickTo(storyTransition, "opacity", { duration: 0.4, ease: "none" })
               : null;
             const scroll = () => {
               const bounds = root.getBoundingClientRect();
@@ -242,6 +249,8 @@ export function HeroMotion({ children }: HeroMotionProps) {
               moveBack?.(progress * 12);
               moveFront?.(progress * 28);
               fadeChamber?.(1 - progress * 0.2);
+              openStory?.(0.84 + progress * 0.16);
+              revealStory?.(0.58 + progress * 0.42);
             };
             window.addEventListener("scroll", scroll, { passive: true });
             cleanups.push(() => window.removeEventListener("scroll", scroll));

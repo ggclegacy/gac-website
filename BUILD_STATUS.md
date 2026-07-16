@@ -22,12 +22,18 @@ Foundation complete.
 - Company identity and approved hero messaging complete
 - Engineered pillar-module system complete
 - Ascend Chamber motion and reduced-motion fallback complete
+- Hero V2 Prompt 1 architecture complete
+- Mobile-first hero hierarchy complete
+- Responsive navigation clearance complete
 
 ## Opportunity Gap
 
 - Opportunity Gap section complete
 - Responsive behavior complete
 - Accessibility complete
+- Chapter Two Prompt 1 story transition complete
+- Ascend Chamber pathway continuation complete
+- Possibility Shift anchor and mobile scroll handoff complete
 
 ## Stack
 

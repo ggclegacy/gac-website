@@ -6,6 +6,12 @@ import { OpportunityGapMotion } from "@/components/sections/OpportunityGapMotion
 export function OpportunityGapSection() {
   return (
     <OpportunityGapMotion>
+      <span className="possibility-shift-anchor" id="possibility-shift" aria-hidden="true" />
+      <div className="opportunity-gap__story-channels" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
       <div className="opportunity-gap__ambient" aria-hidden="true" />
       <div className="opportunity-gap__inner">
         <header className="opportunity-gap__copy" data-opportunity-copy>
